@@ -23,9 +23,10 @@ elif player_or_computer != "Y" or "N":
     player2=False
 
 
-player_class1=input(f"{player_name1} what class do you can pick from /S/ for solder and solder give you extra lives /M/ for medic  you  have less live but a chance to get live per round or /B/ for baller that you get less live but you can doge attacks")
-str.upper(player_class1)
 
+player_class1=input(f"{player_name1} what class do you can pick from /S/ for solder and solder give you extra lives /M/ for medic  you  have less live but a chance to get live per round or /B/ for baller that you get less live but you can doge attacks")
+player_class1_converter= player_class1.upper()
+print(f"{player_class1}")
 if player_class1 == "S":
     player1_lives=20
     print(f"{player_name1} you have pick solder you have 20 lives")
@@ -37,4 +38,6 @@ elif player_class1 == "B":
     player1_lives=15
     doge=True
     print(f"{player_name1} you have pick baller")
+
+
 
