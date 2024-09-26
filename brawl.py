@@ -37,7 +37,25 @@ elif player_class1 == "M":
 elif player_class1 == "B":
     player1_lives=15
     doge=True
-    print(f"{player_name1} you have pick baller")
+    print(f"{player_name1} you have pick baller and you have 15 lives")
 
 
+if player2 == True :
+    player_class2=input(f"{player_name2} what class do you want /S/ for Solder /M/ for Medic /B/ for Baller").upper()
 
+if player_class2 == "S":
+    player1_lives=20
+    print(f"{player_name2} you have pick solder you have 20 lives")
+elif player_class2 == "M":
+    player1_lives=10
+    healing=True
+    print(f"{player_name2} you have pick MEDIC you have 10 live and you can heal your self ")
+elif player_class2 == "B":
+    player1_lives=15
+    doge=True
+    print(f"{player_name2} you have pick baller and you have 15 lives")
+
+if player2 ==False :
+    aiclass=randint(1,3)
+    if aiclass==1 :
+        
