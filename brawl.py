@@ -9,7 +9,7 @@ player_or_computer=input(f"{player_name1} do you wan another player to fight Y/N
 player2=False
 player_class2=False
 game_round=0
-game=On
+game="off"
 player_or_computer_converter = str.upper(player_or_computer)
 if player_or_computer == "Y":
     print("Good")
@@ -48,79 +48,37 @@ if player2 == True :
 if player_class2 == "S":
     player2_lives=20
     print(f"{player_name2} you have pick solder you have 20 lives")
+    game="on"
 elif player_class2 == "M":
     player2_lives=10
     healing=True
     print(f"{player_name2} you have pick MEDIC you have 10 live and you can heal your self ")
+    game="on"
 elif player_class2 == "B":
     player2_lives=15
     doge=True
     print(f"{player_name2} you have pick baller and you have 15 lives")
+    game="no"
 
 if player2 == False :
     ai_class=randint(1,3)
     if ai_class==1:
         player2_lives=20
         print(f"{player_name2} has picket solder")
+        game="on"
     elif ai_class == 2:
         player_class2=10
         healing=True
         print(f"{player_name2} has picket Medic")
+        game="on"
     elif ai_class==3:
         player2_lives=15
         doge=True
         print(f"{player_name2} hasa picket baller")
+        game="on"
     
     
-while game== On:
-    game_round=+1
-    print(f"Round{game_round}")
-    print("1") 
-    time.sleep(1)
+while game == "on":
+    print("Round staring in 3")
     print("2")
-    time.sleep(1)
-    print("game start")
-    
-    player1_spin=randint(1,6)
-    print(f"{player_name1} is spinning")
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{player1_spin}")
-    time.sleep(1)
-    player2_spin=randint(1,6)
-    print(f"{player_name2} is spinning")
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{randint}")
-    time.sleep(1)
-    print(f"{player2_spin}")
-    if player1_spin > player2_spin:
-        print(f"")
-
-
-    
-
-
-    
+    print("1")
