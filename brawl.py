@@ -5,7 +5,12 @@ import math
 import time
 player1_lives=1
 player2_lives=1
-
+healing2=False
+healing1=False
+doge1=False
+doge2=False
+healed1=0
+healed2=0
 player_name1=input("hello player one what is your name")
 player_or_computer=input(f"{player_name1} do you wan another player to fight Y/N")
 player2=False
@@ -93,29 +98,29 @@ while game == "on":
     print(f"{player_name1} rolls")
     player1_roll=randint(1,6)
     print("4")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print("6")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print("2")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print("1")
     time.sleep(0.5)
     print("5")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print(f"{player1_roll}")
     time.sleep(1)
     print(f"{player_name2} is now rolling")
     player2_roll=randint(1,6)
     print("3")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print("1")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print("4")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print("5")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print("6")
-    time.sleep(0,5)
+    time.sleep(0.5)
     print(f"{player2_roll}")
 
     if player1_roll>player2_roll:
