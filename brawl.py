@@ -21,6 +21,12 @@ win_st2 = 0
 NO_one_Won= False
 winner2=0
 winner1=0
+print (r""" 
+__ __  _    _   ___       _  _   ___       ___   ___                    
+|  \  \<_> _| | | __> _ _ <_>| | | . \ _ _ | . \ /  _>  ___ ._ _ _  ___  
+|     || |/ . | | _> | | || || | |  _/| | ||  _/ | <_/\<_> || ' ' |/ ._> 
+|_|_|_||_|\___| |___>|__/ |_||_| |_|  |__/ |_|   `____/<___||_|_|_|\___.  """)
+ 
 player_name1=input("hello player one what is your name  ")
 player_or_computer=input(f"{player_name1} do you wan another player to fight Y/N  ").upper()
 player2=False
@@ -42,7 +48,7 @@ elif player_or_computer != "Y" or "N":
 
 
 
-player_class1=input(f"{player_name1} what class do you can pick from /S/ for solder and solder give you extra lives /M/ for medic  you  have less live but a chance to get live per round or /B/ for baller that you get less live but you can doge attacks but if you wanna pick The Must class that gives you extremely little lives but you get live and damage if you win you gain lives and damage /W/  ").upper() 
+player_class1=input(f"{player_name1} what class do you want \n/S/ for Solder /M/ for Medic /B/ for Baller or you can pick the Must class/W/ ").upper() 
 
 if player_class1 == "S":
     player1_lives=15
@@ -61,10 +67,8 @@ elif player_class1 == "W":
     print(f"{player_name1} you have pick THE must and you have 3 lives")
 
 
-
-
 if player2 == True :
-    player_class2=input(f"{player_name2} what class do you want /S/ for Solder /M/ for Medic /B/ for Baller or you can pick the Must class/W/ ").upper()
+    player_class2=input(f"{player_name2} what class do you want \n/S/ for Solder /M/ for Medic /B/ for Baller or you can pick the Must class/W/ ").upper()
 
 if player_class2 == "S":
     player2_lives=15
@@ -112,8 +116,22 @@ if player2==False:
         print(f"{player_name2} has picket Must")
         game="on"
         
-    
+print(r""""  
+___               _        _ _                     
+| . \ ___  ___  _| | _ _  | | | ___  _ _  ___  ___ 
+|   // ._><_> |/ . || | | |   |/ ._>| '_>/ . \<_-< 
+|_\_\\___.<___|\___|`_. | |_|_|\___.|_|  \___//__/ 
+                    <___'                          """)
 
+time.sleep(1)
+
+print(r""" 
+___   _       _     _  
+| __><_> ___ | |_ _| |_
+| _> | |/ . || . | | | 
+|_|  |_|\_. ||_|_| |_| 
+        <___'          """) 
+   
 while game == "on":
     game_round+=1
     player1_lost=False
@@ -121,8 +139,10 @@ while game == "on":
     NO_one_Won= False
     player2_won = False
     player1_won = False
-    print(f"{player_name1} has {player1_lives}")
+    print(f"{player_name1} has {player1_lives} and")
+    print(f" and is on a win strick of {win_st1} ")
     print(f"{player_name2} has {player2_lives}")
+    print(f" and is on a win strick of {win_st2} ")
     print(f"the Round{game_round}")
     print("Round staring in 3")
     time.sleep(1)
@@ -134,19 +154,15 @@ while game == "on":
     player1_roll=randint(1,6)
     print("4")
     time.sleep(0.2)
-    print("6")
-    time.sleep(0.2)
-    print("3")
+    print("5")
     time.sleep(0.2)
     print(f"{player1_roll}")
-    time.sleep(1)
+    time.sleep(0.5)
     print(f"{player_name2} is now rolling")
     player2_roll=randint(1,6)
     print("3")
     time.sleep(0.2)
     print("5")
-    time.sleep(0.2)
-    print("6")
     time.sleep(0.2)
     print(f"{player2_roll}")
     
@@ -156,18 +172,17 @@ while game == "on":
         player1_won=True
         win_st1+=1
         player2_lost=True
+        win_st2=0
         if winner1 == True:
             player2_lives -= 1*win_st1
         else:
             player2_lives-= 1
-
-
     elif player2_roll>player1_roll:
-        
         print(f"{player_name2} has won")
         player1_lost=True
         win_st2 +=1
         player2_won=True
+        win_st1=0
         if winner2 == True:
             player1_lives-=1*win_st2
         else:
@@ -176,6 +191,8 @@ while game == "on":
     elif player1_roll==player2_roll:
         print("NO ONE WON :L")
         NO_one_Won=True
+        win_st1=0
+        win_st2=0
 
     
     if healing2 == True and player2_lost == True:
@@ -217,10 +234,10 @@ while game == "on":
 
 
 
-    if player1_lives ==0:
+    if player1_lives <= 0 :
         print(f"{player_name2} won the game")
         game = "off"
-    elif player2_lives==0:
+    elif player2_lives <= 0 :
         print(f"{player_name1} won the game")
         game = "off" 
     elif game_round == 40:
