@@ -51,18 +51,18 @@ elif player_or_computer != "Y" or "N":
 player_class1=input(f"{player_name1} what class do you want \n/S/ for Solder /M/ for Medic /B/ for Baller or you can pick the Must class/W/ ").upper() 
 
 if player_class1 == "S":
-    player1_lives=15
+    player1_lives=10
     print(f"{player_name1} you have pick solder you have 20 lives")
 elif player_class1 == "M":
-    player1_lives=5
+    player1_lives=4
     healing1=True
     print(f"{player_name1} you have pick MEDIC you have 10 live and you can heal your self ")
 elif player_class1 == "B":
-    player1_lives=10
+    player1_lives=6
     doge1=True
     print(f"{player_name1} you have pick baller and you have 15 lives")
 elif player_class1 == "W":
-    player1_lives= 3
+    player1_lives= 2
     winner1=True
     print(f"{player_name1} you have pick THE must and you have 3 lives")
 
@@ -71,21 +71,21 @@ if player2 == True :
     player_class2=input(f"{player_name2} what class do you want \n/S/ for Solder /M/ for Medic /B/ for Baller or you can pick the Must class/W/ ").upper()
 
 if player_class2 == "S":
-    player2_lives=15
+    player2_lives=10
     print(f"{player_name2} you have pick solder you have 20 lives")
     game="on"
 elif player_class2 == "M":
-    player2_lives=5
+    player2_lives=4
     healing2=True
     print(f"{player_name2} you have pick MEDIC you have 10 live and you can heal your self ")
     game="on"
 elif player_class2 == "B":
-    player2_lives=10
+    player2_lives=6
     doge2=True
     print(f"{player_name2} you have pick baller and you have 15 lives")
     game="on"
 elif player_class2 =="W":
-     player2_lives=3
+     player2_lives=2
      winner2=True
      print(f"{player_name2} has picket Must")
      game="on"
@@ -97,21 +97,21 @@ if player2==False:
     ai_class=randint(1,4)
     
     if ai_class==1:
-        player2_lives=15
+        player2_lives=10
         print(f"{player_name2} has picket solder")
         game="on"
     elif ai_class == 2:
-        player_class2=5
+        player_class2=4
         healing2=True
         print(f"{player_name2} has picket Medic")
         game="on"
     elif ai_class==3:
-        player2_lives=10
+        player2_lives=6
         doge2=True
         print(f"{player_name2} has picket baller")
         game="on"
     elif ai_class == 4:
-        player2_lives=3
+        player2_lives=2
         winner2=True
         print(f"{player_name2} has picket Must")
         game="on"
@@ -140,9 +140,13 @@ while game == "on":
     player2_won = False
     player1_won = False
     print(f"{player_name1} has {player1_lives} and")
+    time.sleep(1)
     print(f" and is on a win strick of {win_st1} ")
+    time.sleep(1)
     print(f"{player_name2} has {player2_lives}")
+    time.sleep(1)
     print(f" and is on a win strick of {win_st2} ")
+    time.sleep(1)
     print(f"the Round{game_round}")
     print("Round staring in 3")
     time.sleep(1)
